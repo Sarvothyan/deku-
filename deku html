@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Generator</title>
+   <link rel="stylesheet" href="deku.css">
+</head>
+
+<body>
+    <a id="logo" href="/" title="Photo editor pixlr home" aria-label="Photo editor pixlr home">
+        <img src="v.jpg" width="200" height="100"
+            alt="photo editor pixlr" />
+    </a>
+    <center>
+        <h1 id="current-model-name" style="color: rgb(3, 160, 24);">AI Image Generator</h1>
+    </center>
+    <!-- The typing effect -->
+    <div class="typewriter">
+        <h1 id="text">A male riding a yamaha blue bike wearing black helmate in highway</h1>
+        <!-- The turning effect -->
+        <img id="image" src="download.jpg">
+    </div>
+    <div class="abstract">
+        <div class="inside">
+            <center> <a class="read-paper" style="margin-block-start: 20px;" target="_blank"
+                    href="/editor/"><button>Imagen Editor</button></a></center>
+        </div>
+    </div>
+</body>
+<script>
+    // The text to be typed
+    var text = " Sarvothyan";
+
+    // The index of the current character
+    var i = 0;
+
+    // The speed of the typing effect
+    var speed = 50;
+
+    // The function that types the text
+    function typeWriter() {
+        if (i < text.length) {
+            document.getElementById("text").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+    typeWriter();
+
+    const divs = document.querySelectorAll(".typewriter, .type, .writer");
+    let i = 0;
+    function showDivs() {
+        if (i < divs.length) {
+            divs[i].style.visibility = "visible";
+            i++;
+            setTimeout(showDivs, 3000);
+        }
+    }
+    showDivs();
+
+
+</script>
+
+</html>
