@@ -1,0 +1,73 @@
+ 
+        body {
+            background-color: rgb(0, 0, 0);
+        }
+
+        /* Style the text */
+        #text {
+            font-family: 'Times New Roman', Times, serif;
+            float: left;
+            font-size: 20px;
+            padding: 10px;
+            color: rgb(3, 163, 43);
+            margin-top: 50px;
+        }
+
+        /* The typing effect */
+        .typewriter {
+            overflow: hidden;
+            /* Hide the text */
+
+            white-space: nowrap;
+            /* Keeps the content on a single line */
+            margin: 0 auto;
+            /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .15em;
+            /* Adjust as needed */
+            animation:
+                typing 3.5s steps(30, end),
+                blink-caret .75s step-end infinite;
+        }
+
+        /* The typing effect */
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
+
+        /* The typewriter cursor */
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: white
+            }
+        }
+
+        /* Style the image */
+        #image {
+            width: 20%;
+            height: 10%;
+            margin: 0 auto;
+            padding-top: -10px;
+            border-radius: 20%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transform-style: preserve-3d;
+            transition: transform 1s;
+            float: right;
+
+        }
+
+         /* The turning effect */
+        #image:hover {
+            transform: rotateY(180deg);
+        }
